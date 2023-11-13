@@ -1,12 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import { Layout } from './components/layout';
+import { Layout } from './components';
+import {BrowserRouter , Routes, Route } from "react-router-dom"
+import { Landing } from './pages';
+
+
+
 function App() {
   return (
     <div className="App">
-      <Layout/>
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<Landing/>  } />
+        </Routes>
+      </BrowserRouter >
     </div>
   );
 }
+
 
 export default App;

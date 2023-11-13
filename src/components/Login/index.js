@@ -1,1 +1,2 @@
-export * from './LoginText'; 
+export * from "./LoginText";
+export * from "./LoginFormContainer";

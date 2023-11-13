@@ -1,7 +1,6 @@
 import React from 'react'
 import { LoginText } from '../components/Login'
-
-export const landing = () => {
+export const Landing = () => {
   return (
     <div>
         <LoginText/>
