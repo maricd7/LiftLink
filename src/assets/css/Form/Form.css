@@ -1,0 +1,12 @@
+.container{
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    height: min-content;
+}
+h2 , p{
+    color: white;
+}
+.buttons-container{
+    margin-top: 1rem;
+}
