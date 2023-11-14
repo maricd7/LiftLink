@@ -1,0 +1,11 @@
+.SecondaryButton{
+    border-radius: 0.5rem;
+    border: 2px solid #1763AF;
+    color: white;
+    padding: 1rem 1.5rem;
+    background: transparent;
+
+}
+.SecondaryButton:hover{
+    background: #208fff;
+}

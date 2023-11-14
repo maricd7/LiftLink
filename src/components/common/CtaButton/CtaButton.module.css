@@ -1,7 +1,12 @@
-button{
+.ctaButton{
     border-radius: 0.5rem;
     background: #1763AF;
     color: white;
     padding: 1rem 1.5rem;
     border:0;
+    cursor: pointer;
+}
+
+.ctaButton:hover{
+    background: #0080ff;
 }

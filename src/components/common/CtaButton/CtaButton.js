@@ -1,8 +1,7 @@
-import React from 'react'
-import '../../../assets/css/Buttons/CtaButton.css'
+import React from "react";
+import styles from "./CtaButton.module.css";
 
-export const CtaButton = ({text}) => {
-  return (
-    <button>{text}</button>
-  )
-}
+
+export const CtaButton = ({ text }) => {
+  return <button className={styles.ctaButton}>{text}</button>;
+};

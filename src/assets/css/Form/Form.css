@@ -6,7 +6,14 @@
 }
 h2 , p{
     color: white;
+    margin: 0   ;
 }
 .buttons-container{
     margin-top: 1rem;
+}
+.form-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
