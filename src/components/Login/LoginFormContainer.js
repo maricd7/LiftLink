@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CtaButton, Input, SecondaryButton } from '../common'
-import '../../assets/css/Form/Form.css'
+import styles from './Form.module.css';
 import { Login } from './Login'
 import { Register } from './Register'
 
@@ -9,8 +9,8 @@ export const LoginFormContainer = () => {
   const [register,toggleRegister] = useState(false) ; 
 
   return (
-    <div className='container'>
-      {login && (<div className='form-text'>
+    <div className={styles.container}>
+      {login && (<div className={styles.formText}>
        <h2>Let’s get started</h2> 
         <p>Login or register into your liftlink account.</p>
       </div>)}
