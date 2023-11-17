@@ -1,19 +1,17 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,redirect ,useNavigate} from "react-router-dom";
 import { CtaButton, Input } from "../common";
 import styles from "./Form.module.css";
-import { useAuth } from "../../contexts/AuthContext";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../utils/firebase";
-
 export const Register = ({ toggleLogin, toggleRegister }) => {
   const emailRegisterRef = useRef();
   const passwordRegisterRef = useRef();
   const passwordConfirmRef = useRef();
   const [error, setError] = useState("");
-
+  const navigate = useNavigate()
   const register = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (
       passwordRegisterRef.current.value !== passwordConfirmRef.current.value
     ) {
@@ -26,9 +24,13 @@ export const Register = ({ toggleLogin, toggleRegister }) => {
         passwordRegisterRef.current.value
       );
       console.log(user);
+      if (user) {
+        navigate('/home');
+      }
     } catch (error) {
       console.log(error.message);
     }
+    
   };
   const login = () => {};
   const logout = () => {};
