@@ -9,7 +9,7 @@ export const Input = ({ placeholder, label, type, reference, error,}) => {
     <div>
       <label>{label}</label>
       <input ref={reference} type={type} placeholder={placeholder}/>
-      <div>{error}</div>
+      <div className="error">{error}</div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CtaButton, Input } from '../common'
 import styles from './Form.module.css'
-import { useAuth, currentUser,} from '../../contexts/AuthContext'
+import { useAuth, currentUser,signup} from '../../contexts/AuthContext'
 
 
 export const Register = ({toggleLogin, toggleRegister}) => {
@@ -10,24 +10,24 @@ export const Register = ({toggleLogin, toggleRegister}) => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef(); 
-    const signup = useAuth();
+    // const signup = useAuth();
     const[error,setError] = useState('')
     const[loading,setLoading]= useState(false)
-
+    const { signup } = useAuth();
+    const {currentUser} = useAuth();
     async function handleSubmit(e){
-      console.log(signup)
+      // console.log(signup)
         e.preventDefault(); 
-        console.log(emailRef.current.value, 'email')
-        console.log(passwordRef.current.value, 'email')
+        console.log(currentUser, signup)
         if(passwordRef.current.value !== passwordConfirmRef.current.value){
             return(setError('Passwords dont match.'))
         }
-
         try{
+          
           setError('');
-          setLoading(true)
-          await signup(emailRef.current.value, passwordRef.current.value)
-
+          setLoading(true);
+          await signup(emailRef.current.value, passwordRef.current.value);
+          
         }catch{
           setError('Failed to create account.')
         }

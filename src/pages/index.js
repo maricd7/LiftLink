@@ -1,1 +1,2 @@
-export * from './Landing.js';
+export * from './landing'; 
+

@@ -14,3 +14,7 @@ input{
     padding: 1rem;
     color: white;
     }
+
+.error{
+    color:red;
+}
