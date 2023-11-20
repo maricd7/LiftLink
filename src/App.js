@@ -3,12 +3,12 @@ import { Layout } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Landing } from "./pages";
 import { Home } from "./pages/Home";
-import { AuthProvider } from "./contexts/AuthContext";
+
 
 function App() {
   return (
 
-    <AuthProvider>
+    
     <div className="App">
         <BrowserRouter>
           <Routes>
@@ -17,7 +17,7 @@ function App() {
           </Routes>
         </BrowserRouter>
     </div>
-    </AuthProvider>
+    
   );
 }
 
