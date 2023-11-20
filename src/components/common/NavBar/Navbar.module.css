@@ -1,5 +1,12 @@
-nav{
-    width: 100%;
-    padding: 1.5rem 2.5rem;
+.navbar{
+    padding: 1rem 2.5rem;
     background-color: #131313;
+    display: flex;
+    justify-content: space-between;
+
+}
+.searchUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
