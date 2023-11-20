@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link,redirect ,useNavigate} from "react-router-dom";
 import { CtaButton, Input } from "../common";
 import styles from "./Form.module.css";
-import { createUserWithEmailAndPassword} from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useAuth } from "../../contexts/AuthContext";
 export const Register = ({ toggleLogin, toggleRegister }) => {
