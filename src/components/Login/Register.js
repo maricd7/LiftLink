@@ -2,38 +2,42 @@ import React, { useRef, useState } from "react";
 import { Link,redirect ,useNavigate} from "react-router-dom";
 import { CtaButton, Input } from "../common";
 import styles from "./Form.module.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import { useAuth } from "../../contexts/AuthContext";
 export const Register = ({ toggleLogin, toggleRegister }) => {
+
+  const { setUser } = useAuth();
   const emailRegisterRef = useRef();
   const passwordRegisterRef = useRef();
   const passwordConfirmRef = useRef();
   const [error, setError] = useState("");
   const navigate = useNavigate()
+
+
   const register = async (e) => {
     e.preventDefault();
-    if (
-      passwordRegisterRef.current.value !== passwordConfirmRef.current.value
-    ) {
+    if (passwordRegisterRef.current.value !== passwordConfirmRef.current.value) {
       return setError("Passwords do not match");
     }
     try {
-      const user = await createUserWithEmailAndPassword(
+      const userCredential = await createUserWithEmailAndPassword(
         auth,
         emailRegisterRef.current.value,
-        passwordRegisterRef.current.value
+        passwordRegisterRef.current.value,
       );
+      const user = userCredential.user;
       console.log(user);
-      if (user) {
-        navigate('/home');
-      }
+      setUser(user);
+      navigate('/home')
     } catch (error) {
       console.log(error.message);
     }
-    
   };
-  const login = () => {};
+
+  
   const logout = () => {};
+  
   return (
     <div className={styles.container}>
       <div className={styles.formText}>
