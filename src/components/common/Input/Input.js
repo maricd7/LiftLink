@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import "../../../assets/css/Inputs/MainInput.css";
+import styles from './Input.module.css'; 
+
 
 
 export const Input = ({ placeholder, label, type, reference, error,}) => {
