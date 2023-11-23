@@ -1,0 +1,29 @@
+.postContainer{
+    background-color:#131313;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    padding:0.5rem 1rem;
+}
+.postName{
+    color: #fefefe;
+    margin: 0;
+}
+.postCreatorName{
+    margin: 0;
+    font-weight: normal;
+    color: #969696;
+}
+.topicsList{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+}
+.topicsList li{
+    color: #fefefe;
+    list-style: none;
+    background-color:#232323 ;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
