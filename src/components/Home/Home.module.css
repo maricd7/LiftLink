@@ -2,3 +2,8 @@
     background-color: #1D1D1D;
     height: 100vh;
 }
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16rem;
+}

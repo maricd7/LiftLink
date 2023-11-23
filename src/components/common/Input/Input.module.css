@@ -1,13 +1,13 @@
-label{
+.inputLabel{
     color: white;
 }
-div{
+.inputContainer{
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
     gap:0.5rem;
 }
-input{
+.inputField{
     border-radius: 1rem;
     background: #1E1E1E;
     border: 0;
