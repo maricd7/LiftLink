@@ -5,5 +5,5 @@
 .main{
     display: flex;
     justify-content: space-between;
-    margin: 0 16rem;
+    padding: 0 16rem;
 }
