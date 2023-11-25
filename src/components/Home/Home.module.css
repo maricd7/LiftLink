@@ -1,9 +1,12 @@
 .homepage{
     background-color: #1D1D1D;
     height: 100vh;
+    overflow: hidden;
 }
 .main{
     display: flex;
     justify-content: space-between;
     padding: 0 16rem;
+    height: 100%;
+    overflow:hidden;
 }
