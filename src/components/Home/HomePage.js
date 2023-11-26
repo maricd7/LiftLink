@@ -8,7 +8,7 @@ export const HomePage = () => {
   const[createPost, toggleCreatePost] = useState(false); 
 
   const createToggler = ()=>{
-    toggleCreatePost(true)
+    createPost ? toggleCreatePost(false)  : toggleCreatePost(true)
   }
   return (
     <div className={styles.homepage}>
@@ -18,8 +18,7 @@ export const HomePage = () => {
         <Timeline/>
          <div>Topics</div>
         </div>
-        <CreatePost/>
-        {createPost && <CreatePost/>}
+        {createPost && <CreatePost onClick={createToggler}/>}
     </div>
   )
 }
