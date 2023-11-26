@@ -27,3 +27,7 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
+.postsContainer{
+    margin: 1rem 0 10rem 0;
+    gap:4rem;   
+}
